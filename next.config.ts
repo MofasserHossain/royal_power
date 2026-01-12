@@ -1,7 +1,16 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  // Enable static export for cPanel hosting (SSG only, no SSR/ISR)
+  output: 'export',
 
-export default nextConfig;
+  // Add trailing slash for better cPanel compatibility
+  trailingSlash: true,
+
+  // Disable image optimization (not needed for static export)
+  images: {
+    unoptimized: true,
+  },
+}
+
+export default nextConfig

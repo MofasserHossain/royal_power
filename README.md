@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Royal Power - Static Website
+
+A Next.js static website configured for cPanel hosting with the latest technologies.
+
+## Tech Stack
+
+- **Next.js 16.1.1** (latest) with Webpack
+- **React 19**
+- **TypeScript**
+- **Tailwind CSS v4** with color scheme
+- **shadcn/ui** components
+- **ESLint** + **Prettier** for code quality
+
+## Features
+
+- ✅ Static Site Generation (SSG) only - no SSR, no ISR
+- ✅ Configured for cPanel static hosting
+- ✅ Latest Next.js 16
+- ✅ Latest Tailwind CSS v4 with custom color scheme
+- ✅ shadcn/ui components ready
+- ✅ ESLint + Prettier configured
 
 ## Getting Started
 
-First, run the development server:
+### Install Dependencies
 
 ```bash
+pnpm install
+# or
+npm install
+# or
+yarn install
+```
+
+### Development
+
+Run the development server with Webpack:
+
+```bash
+pnpm dev
+# or
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Build the static site:
 
-## Learn More
+```bash
+pnpm build
+# or
+npm run build
+# or
+yarn build
+```
 
-To learn more about Next.js, take a look at the following resources:
+This will generate a static site in the `out/` directory.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Code Quality
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Lint your code:
 
-## Deploy on Vercel
+```bash
+pnpm lint
+# or
+npm run lint
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Format your code:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+pnpm format
+# or
+npm run format
+```
+
+## Deployment to cPanel
+
+1. Build the static site:
+   ```bash
+   pnpm build
+   ```
+
+2. The static files will be in the `out/` directory.
+
+3. Upload the contents of the `out/` directory to your cPanel `public_html` folder.
+
+4. Ensure `index.html` is in the root of `public_html`.
+
+5. Your site should now be live!
+
+## Project Structure
+
+```
+royal_power/
+├── src/
+│   ├── app/              # Next.js App Router
+│   │   ├── layout.tsx    # Root layout
+│   │   ├── page.tsx      # Home page
+│   │   └── globals.css   # Global styles with Tailwind
+│   ├── components/        # React components
+│   │   └── ui/           # shadcn/ui components
+│   └── lib/              # Utility functions
+├── public/               # Static assets
+├── next.config.ts        # Next.js configuration (static export)
+├── tailwind.config.js    # Tailwind CSS configuration
+├── tsconfig.json         # TypeScript configuration
+├── eslint.config.mjs     # ESLint configuration
+└── .prettierrc           # Prettier configuration
+```
+
+## Configuration
+
+### Static Export
+
+The project is configured for static export only. See `next.config.ts`:
+
+- `output: "export"` - Enables static export
+- `trailingSlash: true` - Better cPanel compatibility
+- `images.unoptimized: true` - Required for static export
+
+### Tailwind CSS
+
+Tailwind CSS v4 is configured with a custom color scheme. Colors are defined in `src/app/globals.css` using CSS variables.
+
+### shadcn/ui
+
+shadcn/ui is configured and ready to use. Add components with:
+
+```bash
+npx shadcn@latest add [component-name]
+```
+
+## License
+
+Private project.
