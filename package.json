@@ -1,11 +1,11 @@
 {
-  "name": "royal_power",
+  "name": "royal-power-service",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "node server.js",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "format": "prettier --write .",

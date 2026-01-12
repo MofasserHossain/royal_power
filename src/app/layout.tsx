@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,8 +18,8 @@ const geistMono = Geist_Mono({
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: "Royal Power",
-  description: "Royal Power - Static Website",
+  title: "Royal Power Service - Engineering Solutions Provider",
+  description: "Royal Power Service is a House of Engineering solutions provider nationwide with quality and trust. Engineering solutions provider in Bangladesh.",
 };
 
 export default function RootLayout({
@@ -30,7 +32,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Navigation />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
       </body>
     </html>
   );

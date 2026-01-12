@@ -78,20 +78,48 @@ pnpm format
 npm run format
 ```
 
+### Deployment
+
+Build and prepare for deployment:
+
+```bash
+npm run build:deploy
+```
+
+Check deployment package:
+
+```bash
+npm run deploy:check
+```
+
 ## Deployment to cPanel
 
-1. Build the static site:
+### Quick Deployment
+
+1. Build and prepare deployment package:
+
    ```bash
-   pnpm build
+   npm run build:deploy
    ```
 
-2. The static files will be in the `out/` directory.
+2. Check deployment package:
 
-3. Upload the contents of the `out/` directory to your cPanel `public_html` folder.
+   ```bash
+   npm run deploy:check
+   ```
 
-4. Ensure `index.html` is in the root of `public_html`.
+3. Upload contents of the `deploy/` directory to your cPanel `public_html` folder.
 
-5. Your site should now be live!
+4. Your site should now be live!
+
+### Detailed Instructions
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for complete deployment guide including:
+
+- Step-by-step cPanel upload instructions
+- Troubleshooting common issues
+- Performance optimization tips
+- Security checklist
 
 ## Project Structure
 
@@ -105,9 +133,11 @@ royal_power/
 │   ├── components/        # React components
 │   │   └── ui/           # shadcn/ui components
 │   └── lib/              # Utility functions
-├── public/               # Static assets
+├── public/               # Static assets (includes .htaccess)
+├── scripts/              # Deployment scripts
+│   ├── prepare-deploy.js # Prepares deployment package
+│   └── check-deploy.js   # Validates deployment package
 ├── next.config.ts        # Next.js configuration (static export)
-├── tailwind.config.js    # Tailwind CSS configuration
 ├── tsconfig.json         # TypeScript configuration
 ├── eslint.config.mjs     # ESLint configuration
 └── .prettierrc           # Prettier configuration
