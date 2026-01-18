@@ -80,20 +80,28 @@ function initProductsSlider() {
     if (productsSlider) {
         new Splide('#products-slider', {
             type: 'loop',
-            fixedWidth: '300px',
+            fixedWidth: '380px',
             perMove: 1,
-            gap: '1rem',
+            gap: '1.5rem',
             autoplay: true,
             interval: 3000,
             pauseOnHover: true,
-            arrows: true,
+            arrows: false,
             pagination: true,
             breakpoints: {
                 1024: {
-                    arrows: false,
+                    fixedWidth: '340px',
                 },
-                640: {
-                    fixedWidth: '320px',
+                768: {
+                    fixedWidth: '300px',
+                    gap: '1rem',
+                },
+                480: {
+                    fixedWidth: '280px',
+                    gap: '0.75rem',
+                },
+                375: {
+                    fixedWidth: '260px',
                     gap: '0.5rem',
                 },
             },
@@ -425,3 +433,81 @@ preloadImages([
     'assets/images/slide2.webp',
     'assets/images/slide3.webp'
 ]);
+
+// Product Image Slideshow (for Spare Parts and Controller sections)
+function initProductSlideshows() {
+    // Regular product slideshows (no badge change) - with staggered delays
+    const slideshows = document.querySelectorAll('.product-slideshow');
+    slideshows.forEach((slideshow, index) => {
+        const images = slideshow.querySelectorAll('.slideshow-image');
+        if (images.length < 2) return;
+
+        const interval = parseInt(slideshow.dataset.interval) || 4000;
+        const initialDelay = index * 2000; // Stagger each slideshow by 2 seconds
+        let currentIndex = 0;
+
+        // Start slideshow after initial delay
+        setTimeout(() => {
+            setInterval(() => {
+                // Fade out current image
+                images[currentIndex].classList.remove('active');
+                images[currentIndex].style.opacity = '0';
+
+                // Move to next image
+                currentIndex = (currentIndex + 1) % images.length;
+
+                // Fade in next image
+                images[currentIndex].classList.add('active');
+                images[currentIndex].style.opacity = '1';
+            }, interval);
+        }, initialDelay);
+    });
+
+    // Controller slideshow with dynamic badge - starts after other slideshows
+    const controllerSlideshow = document.querySelector('.controller-slideshow');
+    if (controllerSlideshow) {
+        const images = controllerSlideshow.querySelectorAll('.slideshow-image');
+        const badge = controllerSlideshow.parentElement.querySelector('.controller-badge');
+
+        if (images.length >= 2 && badge) {
+            const interval = parseInt(controllerSlideshow.dataset.interval) || 4000;
+            const initialDelay = 3000; // Start 3 seconds after page load
+            let currentIndex = 0;
+
+            setTimeout(() => {
+                setInterval(() => {
+                    // Fade out current image
+                    images[currentIndex].classList.remove('active');
+                    images[currentIndex].style.opacity = '0';
+
+                    // Move to next image
+                    currentIndex = (currentIndex + 1) % images.length;
+
+                    // Fade in next image
+                    images[currentIndex].classList.add('active');
+                    images[currentIndex].style.opacity = '1';
+
+                    // Update badge text with animation
+                    const newBadgeText = images[currentIndex].dataset.badge;
+                    if (newBadgeText) {
+                        badge.style.transform = 'scale(0.9)';
+                        badge.style.opacity = '0.5';
+
+                        setTimeout(() => {
+                            badge.textContent = newBadgeText;
+                            badge.style.transform = 'scale(1)';
+                            badge.style.opacity = '1';
+                        }, 150);
+                    }
+                }, interval);
+            }, initialDelay);
+        }
+    }
+}
+
+// Initialize product slideshows when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initProductSlideshows);
+} else {
+    initProductSlideshows();
+}

@@ -479,3 +479,38 @@ a, button, input, textarea {
         display: none !important;
     }
 }
+
+/* Product Image Slideshow Styles */
+.product-slideshow,
+.controller-slideshow {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-slideshow .slideshow-image,
+.controller-slideshow .slideshow-image {
+    transition: opacity 0.7s ease-in-out;
+}
+
+.product-slideshow .slideshow-image:first-child,
+.controller-slideshow .slideshow-image:first-child {
+    position: relative;
+}
+
+.product-slideshow .slideshow-image:not(:first-child),
+.controller-slideshow .slideshow-image:not(:first-child) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.product-slideshow .slideshow-image.active,
+.controller-slideshow .slideshow-image.active {
+    opacity: 1;
+}
+
+/* Controller Badge Animation */
+.controller-badge {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
