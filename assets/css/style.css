@@ -1,0 +1,471 @@
+/* Custom Styles for Royal Power Service */
+/* Modern Landing Page Styles */
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Button Styles */
+.btn-primary {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #1e3a8a;
+    color: white;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(30, 58, 138, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 58, 138, 0.4);
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: #1e3a8a;
+    transform: translateY(-2px);
+}
+
+/* Navigation Shadow on Scroll */
+.nav-scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Slider Styles */
+.hero-section .splide__arrow {
+    background: rgba(255, 255, 255, 0.9);
+    width: 50px;
+    height: 50px;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section .splide__arrow:hover {
+    opacity: 1;
+    background: white;
+    transform: scale(1.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section .splide__arrow svg {
+    fill: #1e3a8a;
+    width: 20px;
+    height: 20px;
+}
+
+.hero-section .splide__pagination {
+    bottom: 30px;
+}
+
+.hero-section .splide__pagination__page {
+    background: rgba(255, 255, 255, 0.5);
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section .splide__pagination__page:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+}
+
+.hero-section .splide__pagination__page.is-active {
+    background: #d97706;
+    transform: scale(1.3);
+    box-shadow: 0 2px 10px rgba(217, 119, 6, 0.4);
+}
+
+/* Slide Content Animation */
+.slide-content {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideContentFadeIn 0.8s ease forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes slideContentFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.splide__slide.is-active .slide-content {
+    animation: slideContentFadeIn 0.8s ease forwards;
+    animation-delay: 0.3s;
+}
+
+/* Service Card Styles */
+.service-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Card Styles */
+.product-card {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Products Slider Styles */
+#products-slider {
+    overflow: hidden;
+}
+
+#products-slider .splide__track {
+    overflow: visible;
+    padding: 20px 0;
+}
+
+#products-slider .splide__list {
+    padding: 10px 0;
+}
+
+#products-slider .splide__arrow {
+    background: #1e3a8a;
+    width: 44px;
+    height: 44px;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+#products-slider .splide__arrow:hover {
+    background: #1e40af;
+    transform: scale(1.1);
+}
+
+#products-slider .splide__arrow svg {
+    fill: white;
+    width: 18px;
+    height: 18px;
+}
+
+#products-slider .splide__pagination {
+    position: relative;
+    bottom: auto;
+    margin-top: 20px;
+}
+
+#products-slider .splide__pagination__page {
+    background: #cbd5e1;
+    width: 10px;
+    height: 10px;
+    transition: all 0.3s ease;
+}
+
+#products-slider .splide__pagination__page.is-active {
+    background: #1e3a8a;
+    transform: scale(1.2);
+}
+
+/* Client Logo Slider Styles */
+#clients-slider .splide__arrow {
+    display: none;
+}
+
+#clients-slider .splide__track {
+    overflow: visible;
+    padding: 20px 0;
+}
+
+#clients-slider .splide__list {
+    padding: 10px 0;
+}
+
+#clients-slider {
+    overflow: hidden;
+}
+
+.client-logo-card {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.client-logo-card:hover {
+    background: white;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
+}
+
+.client-logo-card img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.client-logo-card:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.fade-in-up.visible {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Staggered Animation Delays */
+.fade-in-up:nth-child(1) { animation-delay: 0s; }
+.fade-in-up:nth-child(2) { animation-delay: 0.1s; }
+.fade-in-up:nth-child(3) { animation-delay: 0.2s; }
+.fade-in-up:nth-child(4) { animation-delay: 0.3s; }
+
+/* WhatsApp Float Button Animation */
+.whatsapp-float {
+    animation: whatsappPulse 2s infinite;
+}
+
+@keyframes whatsappPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Mobile Menu Animation */
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+#mobile-menu.active {
+    max-height: 400px;
+}
+
+/* Stats Counter Animation */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stats-animated {
+    animation: countUp 0.8s ease forwards;
+}
+
+/* Image Hover Zoom */
+.image-zoom {
+    overflow: hidden;
+}
+
+.image-zoom img {
+    transition: transform 0.5s ease;
+}
+
+.image-zoom:hover img {
+    transform: scale(1.1);
+}
+
+/* Section Title Underline */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #d97706;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e3a8a;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1e40af;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section .splide__arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-section .splide__arrow--prev {
+        left: 10px;
+    }
+
+    .hero-section .splide__arrow--next {
+        right: 10px;
+    }
+
+    .hero-section .splide__pagination {
+        bottom: 20px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    .whatsapp-float {
+        width: 56px;
+        height: 56px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Focus States for Accessibility */
+a:focus,
+button:focus {
+    outline: 2px solid #d97706;
+    outline-offset: 2px;
+}
+
+/* Selection Color */
+::selection {
+    background: #1e3a8a;
+    color: white;
+}
+
+/* Loading Animation */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.loading {
+    background: linear-gradient(to right, #f6f7f8 8%, #edeef1 18%, #f6f7f8 33%);
+    background-size: 1000px 100%;
+    animation: shimmer 1.5s infinite linear;
+}
+
+/* Smooth Transitions for All Interactive Elements */
+a, button, input, textarea {
+    transition: all 0.3s ease;
+}
+
+/* Developer Credit Styles */
+.developer-credit {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.developer-credit:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.developer-credit .dev-image {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4b5563;
+    transition: all 0.3s ease;
+}
+
+.developer-credit:hover .dev-image {
+    border-color: #d97706;
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgba(217, 119, 6, 0.4);
+}
+
+.developer-credit .dev-name {
+    color: #d97706;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.developer-credit:hover .dev-name {
+    color: #d97706;
+}
+
+.developer-credit .dev-label {
+    color: #9ca3af;
+    transition: all 0.3s ease;
+}
+
+.developer-credit:hover .dev-label {
+    color: #d1d5db;
+}
+
+/* Print Styles */
+@media print {
+    .whatsapp-float,
+    #mobile-menu-button,
+    .splide__arrow,
+    .splide__pagination {
+        display: none !important;
+    }
+}

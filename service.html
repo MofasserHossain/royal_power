@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service - Royal Power Service</title>
+    <meta name="description" content="Comprehensive engineering solutions with quality, trust, and expertise">
+
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'royal-blue': '#1e3a8a',
+                        'royal-gold': '#d97706',
+                        'royal-green': '#059669',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-white text-gray-900 font-inter">
+    <!-- Top Bar -->
+    <div class="bg-royal-blue text-white py-2 text-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-2">
+                <div class="flex items-center gap-4 flex-wrap justify-center">
+                    <a href="tel:+8801729959988" class="flex items-center gap-2 transition-colors">
+                        <i class="fas fa-phone"></i>
+                        <span>+88 01729959988</span>
+                    </a>
+                    <a href="mailto:info@royalpowerservice.com" class="flex items-center gap-2 transition-colors">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@royalpowerservice.com</span>
+                    </a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="https://www.facebook.com/royalpowerengr" target="_blank" class="transition-colors" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <!-- <a href="#" class="transition-colors" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="transition-colors" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a> -->
+                    <a href="https://www.youtube.com/@royalpowerservice" target="_blank" class="transition-colors" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="main-nav" class="bg-white sticky top-0 z-50 transition-shadow duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center">
+                    <img src="assets/images/main-logo.jpg" alt="Royal Power Service Logo" class="h-14 md:h-16 w-auto">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="index.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 rounded-md transition-colors">Home</a>
+                    <a href="products.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 rounded-md transition-colors">Products</a>
+                    <a href="service.html" class="px-4 py-2 text-sm font-medium text-royal-blue border-b-2 border-royal-blue">Service</a>
+                    <a href="contact.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 rounded-md transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden text-gray-700 hover:text-royal-blue p-2" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-gray-100">
+                <a href="index.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:bg-blue-50 rounded-md mt-2">Home</a>
+                <a href="products.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:bg-blue-50 rounded-md">Products</a>
+                <a href="service.html" class="block px-4 py-3 text-sm font-medium text-royal-blue bg-blue-50 rounded-md">Service</a>
+                <a href="contact.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:bg-blue-50 rounded-md">Contact</a>
+                <a href="tel:+8801729959988" class="block px-4 py-3 text-sm font-medium bg-royal-blue text-white rounded-md mt-3 text-center">
+                    <i class="fas fa-phone mr-2"></i>
+                    +88 01729959988
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="relative bg-gray-900 text-white py-20 md:py-28 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="assets/images/Electrical-Workers.jpg" alt="" class="w-full h-full object-cover opacity-30">
+        </div>
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-royal-blue/90 via-blue-800/85 to-blue-900/90"></div>
+        <!-- Decorative Elements -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-white rounded-full -translate-x-1/2 translate-y-1/2"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Breadcrumb -->
+            <nav class="flex justify-center mb-6" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-2 text-sm">
+                    <li><a href="index.html" class="text-blue-200 hover:text-white transition-colors">Home</a></li>
+                    <li><span class="text-blue-300 mx-2">/</span></li>
+                    <li><span class="text-royal-gold font-medium">Services</span></li>
+                </ol>
+            </nav>
+
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    Our <span class="text-royal-gold">Services</span>
+                </h1>
+                <p class="text-lg md:text-xl text-blue-100 leading-relaxed">
+                    Comprehensive engineering solutions with quality, trust, and expertise. Our experienced team delivers fast response and cost-effective solutions for all your power needs.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                    <!-- Service 1 -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all fade-in-up">
+                        <div class="w-16 h-16 bg-royal-blue/10 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-bolt text-3xl text-royal-blue"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">Power Solutions</h3>
+                        <p class="text-gray-600">
+                            Comprehensive power engineering solutions for industrial and commercial applications. We provide reliable and efficient power systems.
+                        </p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all fade-in-up">
+                        <div class="w-16 h-16 bg-royal-green/10 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-cog text-3xl text-royal-green"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">Engineering Services</h3>
+                        <p class="text-gray-600">
+                            Expert engineering services with innovative applications and quality assurance. Our team ensures the highest standards.
+                        </p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all fade-in-up">
+                        <div class="w-16 h-16 bg-royal-gold/20 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-tools text-3xl text-royal-gold"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">Maintenance & Support</h3>
+                        <p class="text-gray-600">
+                            Ongoing maintenance and technical support for all your engineering needs. 24/7 service available.
+                        </p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all fade-in-up">
+                        <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-shield-alt text-3xl text-red-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">Quality Assurance</h3>
+                        <p class="text-gray-600">
+                            Rigorous quality control and testing to ensure reliable performance. We guarantee quality in every solution.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Why Choose Us Section -->
+                <div class="bg-white rounded-2xl p-8 md:p-12 shadow-xl fade-in-up">
+                    <h2 class="text-3xl font-bold mb-8 text-center text-royal-blue">Why Choose Us?</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-royal-green/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-royal-green"></i>
+                            </div>
+                            <span class="text-lg font-medium">Experienced engineering team</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-royal-green/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-royal-green"></i>
+                            </div>
+                            <span class="text-lg font-medium">Fast response time</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-royal-green/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-royal-green"></i>
+                            </div>
+                            <span class="text-lg font-medium">Cost-effective solutions</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-royal-green/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-royal-green"></i>
+                            </div>
+                            <span class="text-lg font-medium">Quality guaranteed</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-royal-green/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-royal-green"></i>
+                            </div>
+                            <span class="text-lg font-medium">Nationwide service</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-royal-green/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-royal-green"></i>
+                            </div>
+                            <span class="text-lg font-medium">Innovation driven</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="py-16 md:py-20 bg-gradient-to-r from-royal-blue to-blue-700 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-64 h-64 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full translate-x-1/2 translate-y-1/2"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center text-white max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Need Our Services?</h2>
+                <p class="text-lg md:text-xl text-blue-100 mb-10">
+                    Contact us today for comprehensive engineering solutions tailored to your needs.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="contact.html" class="bg-white text-royal-blue px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 inline-flex items-center justify-center">
+                        <i class="fas fa-envelope mr-2"></i> Contact Us
+                    </a>
+                    <a href="tel:+8801729959988" class="bg-white text-royal-blue px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 inline-flex items-center justify-center">
+                        <i class="fas fa-phone mr-2"></i> Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+                <!-- Company Info -->
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <div class="mb-6">
+                        <img src="assets/images/main-logo.jpg" alt="Royal Power Service" class="h-16 w-auto">
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        House of Engineering solutions provider nationwide with quality and trust. Your reliable partner for all power needs.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://www.facebook.com/royalpowerengr" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-royal-blue transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <!-- <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-royal-blue transition-colors" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-royal-blue transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a> -->
+                        <a href="https://www.youtube.com/@royalpowerservice" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="text-gray-400 hover:text-royal-gold transition-colors inline-flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Home</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-royal-gold transition-colors inline-flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Products</a></li>
+                        <li><a href="service.html" class="text-gray-400 hover:text-royal-gold transition-colors inline-flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Service</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-royal-gold transition-colors inline-flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Our Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="service.html" class="text-gray-400 hover:text-royal-gold transition-colors inline-flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Power Solutions</a></li>
+                        <li><a href="service.html" class="text-gray-400 hover:text-royal-gold transition-colors inline-flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Engineering Services</a></li>
+                        <li><a href="service.html" class="text-gray-400 hover:text-royal-gold transition-colors inline-flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Maintenance & Support</a></li>
+                        <li><a href="service.html" class="text-gray-400 hover:text-royal-gold transition-colors inline-flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Quality Assurance</a></li>
+                        <li><a href="service.html" class="text-gray-400 hover:text-royal-gold transition-colors inline-flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>24/7 Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact Us</h4>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-royal-gold"></i>
+                            </div>
+                            <p class="text-gray-400">
+                                House No 06, Lane 03, Block-C,<br>
+                                Mirpur 10, Dhaka-1216
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-royal-gold"></i>
+                            </div>
+                            <a href="tel:+8801729959988" class="text-royal-gold hover:text-yellow-300 transition-colors">
+                                +88 01729959988
+                            </a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-royal-gold"></i>
+                            </div>
+                            <a href="mailto:info@royalpowerservice.com" class="text-royal-gold hover:text-yellow-300 transition-colors break-all">
+                                info@royalpowerservice.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-8 mt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-sm text-gray-400">
+                        &copy; <span class="copyright-year">2026</span> Royal Power Service. All rights reserved.
+                    </p>
+                    <a href="https://www.linkedin.com/in/mofasser-hossain/" target="_blank" rel="noopener noreferrer" class="developer-credit text-sm">
+                        <span class="dev-label">Developed by</span>
+                        <img src="assets/images/developer.jpg" alt="Mofasser Hossain" class="dev-image">
+                        <span class="dev-name">Mofasser Hossain</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/8801729959988?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
+       target="_blank"
+       rel="noopener noreferrer"
+       class="whatsapp-float fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all hover:scale-110 z-50"
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp text-white text-3xl"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

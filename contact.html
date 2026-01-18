@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Royal Power Service</title>
+    <meta name="description" content="Get in touch with Royal Power Service for engineering solutions and support">
+
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'royal-blue': '#1e3a8a',
+                        'royal-gold': '#d97706',
+                        'royal-green': '#059669',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-white text-gray-900 font-inter">
+    <!-- Top Bar -->
+    <div class="bg-royal-blue text-white py-2 text-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-2">
+                <div class="flex items-center gap-4 flex-wrap justify-center">
+                    <a href="tel:+8801729959988" class="flex items-center gap-2 transition-colors">
+                        <i class="fas fa-phone"></i>
+                        <span>+88 01729959988</span>
+                    </a>
+                    <a href="mailto:info@royalpowerservice.com" class="flex items-center gap-2 transition-colors">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@royalpowerservice.com</span>
+                    </a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="https://www.facebook.com/royalpowerengr" target="_blank" class="transition-colors" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <!-- <a href="#" class="transition-colors" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="transition-colors" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a> -->
+                    <a href="https://www.youtube.com/@royalpowerservice" target="_blank" class="transition-colors" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="main-nav" class="bg-white sticky top-0 z-50 transition-shadow duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center">
+                    <img src="assets/images/main-logo.jpg" alt="Royal Power Service Logo" class="h-14 md:h-16 w-auto">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="index.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 rounded-md transition-colors">Home</a>
+                    <a href="products.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 rounded-md transition-colors">Products</a>
+                    <a href="service.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 rounded-md transition-colors">Service</a>
+                    <a href="contact.html" class="px-4 py-2 text-sm font-medium text-royal-blue border-b-2 border-royal-blue">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden text-gray-700 hover:text-royal-blue p-2" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-gray-100">
+                <a href="index.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:bg-blue-50 rounded-md mt-2">Home</a>
+                <a href="products.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:bg-blue-50 rounded-md">Products</a>
+                <a href="service.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:bg-blue-50 rounded-md">Service</a>
+                <a href="contact.html" class="block px-4 py-3 text-sm font-medium text-royal-blue bg-blue-50 rounded-md">Contact</a>
+                <a href="tel:+8801729959988" class="block px-4 py-3 text-sm font-medium bg-royal-blue text-white rounded-md mt-3 text-center">
+                    <i class="fas fa-phone mr-2"></i>
+                    +88 01729959988
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="relative bg-gray-900 text-white py-20 md:py-28 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="assets/images/slide1.jpg" alt="" class="w-full h-full object-cover opacity-30">
+        </div>
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-royal-blue/90 via-blue-800/85 to-blue-900/90"></div>
+        <!-- Decorative Elements -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-white rounded-full -translate-x-1/2 translate-y-1/2"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Breadcrumb -->
+            <nav class="flex justify-center mb-6" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-2 text-sm">
+                    <li><a href="index.html" class="text-blue-200 hover:text-white transition-colors">Home</a></li>
+                    <li><span class="text-blue-300 mx-2">/</span></li>
+                    <li><span class="text-royal-gold font-medium">Contact</span></li>
+                </ol>
+            </nav>
+
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    Contact <span class="text-royal-gold">Us</span>
+                </h1>
+                <p class="text-lg md:text-xl text-blue-100 leading-relaxed">
+                    Get in touch with our expert team for engineering solutions and support. We're here to help you with all your power needs, 24/7.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+                    <!-- Contact Info -->
+                    <div class="space-y-6 fade-in-up flex flex-col">
+                        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-14 h-14 bg-royal-blue/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-royal-blue text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-2 text-gray-900">Our Address</h3>
+                                    <p class="text-gray-600">
+                                        House No 06, Lane 03, Block-C,<br>
+                                        Mirpur 10, Dhaka-1216
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-14 h-14 bg-royal-green/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-phone text-royal-green text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-2 text-gray-900">Phone Numbers</h3>
+                                    <a href="tel:+8801729959988" class="text-royal-blue hover:text-blue-700 font-medium block mb-1">
+                                        +88 01729959988
+                                    </a>
+                                    <p class="text-gray-500 text-sm">24/7 Service Hotline</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-14 h-14 bg-royal-gold/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-envelope text-royal-gold text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-2 text-gray-900">Email Address</h3>
+                                    <a href="mailto:info@royalpowerservice.com" class="text-royal-blue hover:text-blue-700 font-medium">
+                                        info@royalpowerservice.com
+                                    </a>
+                                    <p class="text-gray-500 text-sm mt-1">We'll respond within 24 hours</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow flex-1">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-14 h-14 bg-green-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fab fa-whatsapp text-green-500 text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-2 text-gray-900">WhatsApp</h3>
+                                    <a href="https://wa.me/8801729959988?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       class="text-royal-blue hover:text-blue-700 font-medium">
+                                        Chat with us on WhatsApp
+                                    </a>
+                                    <p class="text-gray-500 text-sm mt-1">Quick response guaranteed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg fade-in-up flex flex-col">
+                        <h2 class="text-2xl font-bold mb-6 text-gray-900">Send us a Message</h2>
+                        <form id="contact-form" action="https://formsubmit.co/info@royalpowerservice.com" method="POST" class="space-y-5 flex-1 flex flex-col">
+                            <!-- Formsubmit Configuration -->
+                            <input type="hidden" name="_subject" value="New Contact from Royal Power Website">
+                            <input type="hidden" name="_next" value="https://royalpowerservice.com/contact.html?success=true">
+                            <input type="hidden" name="_captcha" value="true">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="text" name="_honey" style="display:none">
+                            <!-- Name and Email Row -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium mb-2 text-gray-700">Full Name *</label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-royal-blue focus:border-transparent transition-all"
+                                        placeholder="Your full name"
+                                    />
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium mb-2 text-gray-700">Email Address *</label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-royal-blue focus:border-transparent transition-all"
+                                        placeholder="your.email@example.com"
+                                    />
+                                </div>
+                            </div>
+                            <!-- Phone and Subject Row -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium mb-2 text-gray-700">Phone Number</label>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-royal-blue focus:border-transparent transition-all"
+                                        placeholder="+88 01XXXXXXXXX"
+                                    />
+                                </div>
+                                <div>
+                                    <label for="subject" class="block text-sm font-medium mb-2 text-gray-700">Subject</label>
+                                    <input
+                                        type="text"
+                                        id="subject"
+                                        name="subject"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-royal-blue focus:border-transparent transition-all"
+                                        placeholder="How can we help you?"
+                                    />
+                                </div>
+                            </div>
+                            <div class="flex-1 flex flex-col">
+                                <label for="message" class="block text-sm font-medium mb-2 text-gray-700">Message *</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="5"
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-royal-blue focus:border-transparent transition-all resize-none flex-1 min-h-[120px]"
+                                    placeholder="Tell us about your requirements..."
+                                ></textarea>
+                            </div>
+                            <button
+                                type="submit"
+                                class="w-full btn-primary py-4 text-lg mt-auto"
+                            >
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Map Section -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in-up">
+                <span class="text-royal-blue font-semibold text-sm uppercase tracking-wider">Find Us</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-900">Our Location</h2>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                    Visit our office for a personal consultation about your power solution needs
+                </p>
+            </div>
+            <div class="max-w-6xl mx-auto fade-in-up">
+                <div class="rounded-2xl overflow-hidden shadow-xl">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d228.1405121380191!2d90.37311562838204!3d23.8097717956505!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c1003555bda1%3A0x2bb33e490b98a972!2sRoyal%20Power%20Service!5e0!3m2!1sen!2sus!4v1768654307500!5m2!1sen!2sus"
+                        width="100%"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="w-full"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="py-16 md:py-20 bg-gradient-to-r from-royal-blue to-blue-700 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-64 h-64 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full translate-x-1/2 translate-y-1/2"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center text-white max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Need Immediate Assistance?</h2>
+                <p class="text-lg md:text-xl text-blue-100 mb-10">
+                    Our team is available 24/7 to help you with any power solution inquiries.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="tel:+8801729959988" class="bg-white text-royal-blue px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 inline-flex items-center justify-center">
+                        <i class="fas fa-phone mr-2"></i> Call Now
+                    </a>
+                    <a href="https://wa.me/8801729959988?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="bg-green-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-600 transition-all hover:scale-105 inline-flex items-center justify-center">
+                        <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+                <!-- Company Info -->
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <div class="mb-6">
+                        <img src="assets/images/main-logo.jpg" alt="Royal Power Service" class="h-16 w-auto">
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        House of Engineering solutions provider nationwide with quality and trust. Your reliable partner for all power needs.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://www.facebook.com/royalpowerengr" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-royal-blue transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <!-- <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-royal-blue transition-colors" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-royal-blue transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a> -->
+                        <a href="https://www.youtube.com/channel/UC687V6lYhNz2r6sB-5K-qBw" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="text-gray-400 hover:text-royal-gold transition-colors inline-flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Home</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-royal-gold transition-colors inline-flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Products</a></li>
+                        <li><a href="service.html" class="text-gray-400 hover:text-royal-gold transition-colors inline-flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Service</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-royal-gold transition-colors inline-flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Products -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Our Products</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="products.html" class="text-gray-400 hover:text-royal-gold transition-colors inline-flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Diesel Generators</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-royal-gold transition-colors inline-flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>MV Transformers</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-royal-gold transition-colors inline-flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Cast Resin Transformers</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-royal-gold transition-colors inline-flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Switchgear Solutions</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-royal-gold transition-colors inline-flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Synchronizing Panels</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact Us</h4>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-royal-gold"></i>
+                            </div>
+                            <p class="text-gray-400">
+                                House No 06, Lane 03, Block-C,<br>
+                                Mirpur 10, Dhaka-1216
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-royal-gold"></i>
+                            </div>
+                            <a href="tel:+8801729959988" class="text-royal-gold hover:text-yellow-300 transition-colors">
+                                +88 01729959988
+                            </a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-royal-gold"></i>
+                            </div>
+                            <a href="mailto:info@royalpowerservice.com" class="text-royal-gold hover:text-yellow-300 transition-colors break-all">
+                                info@royalpowerservice.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-8 mt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-sm text-gray-400">
+                        &copy; <span class="copyright-year">2026</span> Royal Power Service. All rights reserved.
+                    </p>
+                    <a href="https://www.linkedin.com/in/mofasser-hossain/" target="_blank" rel="noopener noreferrer" class="developer-credit text-sm">
+                        <span class="dev-label">Developed by</span>
+                        <img src="assets/images/developer.jpg" alt="Mofasser Hossain" class="dev-image">
+                        <span class="dev-name">Mofasser Hossain</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/8801729959988?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
+       target="_blank"
+       rel="noopener noreferrer"
+       class="whatsapp-float fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all hover:scale-110 z-50"
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp text-white text-3xl"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
