@@ -24,6 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Update Copyright Year
     updateCopyrightYear();
+
+    // Update Years of Experience
+    updateYearsExperience();
 });
 
 // Dynamic Copyright Year
@@ -33,6 +36,22 @@ function updateCopyrightYear() {
 
     copyrightYearElements.forEach(element => {
         element.textContent = currentYear;
+    });
+}
+
+// Dynamic Years of Experience (Founded in 2009)
+function updateYearsExperience() {
+    const FOUNDING_YEAR = 2009;
+    const currentYear = new Date().getFullYear();
+    const yearsOfExperience = currentYear - FOUNDING_YEAR;
+
+    const experienceElements = document.querySelectorAll('.years-experience');
+    experienceElements.forEach(element => {
+        element.textContent = yearsOfExperience + '+';
+        // Update data-count attribute for counter animation
+        if (element.hasAttribute('data-count')) {
+            element.setAttribute('data-count', yearsOfExperience);
+        }
     });
 }
 
