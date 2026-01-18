@@ -43,35 +43,26 @@
     <link rel="icon" type="image/png" href="assets/images/mini-logo.png">
     <link rel="apple-touch-icon" href="assets/images/mini-logo.png">
 
-    <!-- Google Fonts (Inter) -->
+    <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'inter': ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        'royal-blue': '#1e3a8a',
-                        'royal-gold': '#d97706',
-                        'royal-green': '#059669',
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Critical CSS (inline for above-the-fold) -->
+    <link rel="stylesheet" href="assets/css/tailwind.min.css">
 
-    <!-- Splide.js CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <!-- Google Fonts (Inter) - deferred -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
 
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Splide.js CSS - deferred (non-critical) -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"></noscript>
+
+    <!-- Font Awesome - deferred (non-critical) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -221,7 +212,7 @@
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center">
-                    <img src="assets/images/main-logo.jpg" alt="Royal Power Service Logo" class="h-14 md:h-16 w-auto">
+                    <img src="assets/images/main-logo.jpg" alt="Royal Power Service Logo" class="h-14 md:h-16 w-auto" width="160" height="64">
                 </a>
 
                 <!-- Desktop Navigation -->
@@ -260,7 +251,7 @@
                     <!-- Slide 1 -->
                     <li class="splide__slide">
                         <div class="hero-slide relative h-[500px] md:h-[600px] lg:h-[700px]">
-                            <img src="assets/images/slide1.jpg" alt="Power Solutions" class="absolute inset-0 w-full h-full object-cover">
+                            <img src="assets/images/slide1.webp" alt="Power Solutions" class="absolute inset-0 w-full h-full object-cover" width="1920" height="700" fetchpriority="high">
                             <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
                             <div class="absolute inset-0 flex items-center">
                                 <div class="container mx-auto px-4">
@@ -285,7 +276,7 @@
                     <!-- Slide 2 -->
                     <li class="splide__slide">
                         <div class="hero-slide relative h-[500px] md:h-[600px] lg:h-[700px]">
-                            <img src="assets/images/slide2.jpg" alt="Engineering Excellence" class="absolute inset-0 w-full h-full object-cover">
+                            <img src="assets/images/slide2.webp" alt="Engineering Excellence" class="absolute inset-0 w-full h-full object-cover" width="1920" height="700" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
                             <div class="absolute inset-0 flex items-center">
                                 <div class="container mx-auto px-4">
@@ -310,7 +301,7 @@
                     <!-- Slide 3 -->
                     <li class="splide__slide">
                         <div class="hero-slide relative h-[500px] md:h-[600px] lg:h-[700px]">
-                            <img src="assets/images/slide3.jpg" alt="24/7 Service" class="absolute inset-0 w-full h-full object-cover">
+                            <img src="assets/images/slide3.webp" alt="24/7 Service" class="absolute inset-0 w-full h-full object-cover" width="1920" height="700" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
                             <div class="absolute inset-0 flex items-center">
                                 <div class="container mx-auto px-4">
@@ -367,7 +358,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <!-- Image Column -->
                 <div class="relative fade-in-up">
-                    <img src="assets/images/Electrical-Workers.jpg" alt="Electrical Workers" class="rounded-2xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover" loading="lazy">
+                    <img src="assets/images/Electrical-Workers.webp" alt="Electrical Workers" class="rounded-2xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover" width="600" height="500" loading="lazy">
                     <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl hidden md:block">
                         <div class="text-3xl font-bold text-royal-blue">17+</div>
                         <div class="text-sm text-gray-800">Years of Excellence</div>
@@ -413,7 +404,7 @@
                         </div>
                     </div>
 
-                    <a href="contact.html" class="btn-primary inline-flex items-center">
+                    <a href="contact.html" class="btn-primary inline-flex items-center" aria-label="Learn more about Royal Power Service">
                         Learn More <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -436,7 +427,7 @@
                 <!-- Diesel Generator -->
                 <div class="service-card bg-white rounded-2xl shadow-lg overflow-hidden group fade-in-up">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="assets/images/generator.jpg" alt="Diesel Generator" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                        <img src="assets/images/generator.jpg" alt="Diesel Generator" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" width="400" height="192" loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-4">
                             <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
@@ -447,7 +438,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2 text-gray-900">Diesel Generator</h3>
                         <p class="text-gray-600 text-sm mb-4">15 KVA - 3000 KVA generators with sales, rental, installation & 24/7 support.</p>
-                        <a href="service.html" class="text-royal-blue font-semibold text-sm inline-flex items-center group-hover:text-blue-700">
+                        <a href="service.html" class="text-royal-blue font-semibold text-sm inline-flex items-center group-hover:text-blue-700" aria-label="Learn more about Diesel Generator services">
                             Learn More <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
@@ -456,7 +447,7 @@
                 <!-- Genuine Spare Parts -->
                 <div class="service-card bg-white rounded-2xl shadow-lg overflow-hidden group fade-in-up">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="assets/images/speare-parts.png" alt="Generator Spare Parts" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                        <img src="assets/images/speare-parts.webp" alt="Generator Spare Parts" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" width="400" height="192" loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-4">
                             <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
@@ -467,7 +458,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2 text-gray-900">Genuine Spare Parts</h3>
                         <p class="text-gray-600 text-sm mb-4">Genuine filters, overhauling spares, and generator controllers available.</p>
-                        <a href="service.html" class="text-royal-blue font-semibold text-sm inline-flex items-center group-hover:text-blue-700">
+                        <a href="service.html" class="text-royal-blue font-semibold text-sm inline-flex items-center group-hover:text-blue-700" aria-label="Learn more about Genuine Spare Parts">
                             Learn More <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
@@ -476,7 +467,7 @@
                 <!-- Synchronizing Panel -->
                 <div class="service-card bg-white rounded-2xl shadow-lg overflow-hidden group fade-in-up">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="assets/images/synchronizing-panel.jpg" alt="Synchronizing Panel" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                        <img src="assets/images/synchronizing-panel.webp" alt="Synchronizing Panel" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" width="400" height="192" loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-4">
                             <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
@@ -487,7 +478,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2 text-gray-900">Synchronizing Panel</h3>
                         <p class="text-gray-600 text-sm mb-4">Diesel, Gas & REB generator synchronizing solutions for all needs.</p>
-                        <a href="service.html" class="text-royal-blue font-semibold text-sm inline-flex items-center group-hover:text-blue-700">
+                        <a href="service.html" class="text-royal-blue font-semibold text-sm inline-flex items-center group-hover:text-blue-700" aria-label="Learn more about Synchronizing Panel solutions">
                             Learn More <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
@@ -496,7 +487,7 @@
                 <!-- Services & Support -->
                 <div class="service-card bg-white rounded-2xl shadow-lg overflow-hidden group fade-in-up">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="assets/images/service_image.png" alt="Services & Support" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                        <img src="assets/images/service_image.webp" alt="Services & Support" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" width="400" height="192" loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-4">
                             <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
@@ -507,7 +498,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2 text-gray-900">Services & Support</h3>
                         <p class="text-gray-600 text-sm mb-4">AMC, emergency 24/7 support, scheduled service & overhauling.</p>
-                        <a href="service.html" class="text-royal-blue font-semibold text-sm inline-flex items-center group-hover:text-blue-700">
+                        <a href="service.html" class="text-royal-blue font-semibold text-sm inline-flex items-center group-hover:text-blue-700" aria-label="Learn more about Services and Support">
                             Learn More <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
@@ -594,7 +585,7 @@
                         <li class="splide__slide">
                             <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden mx-3 group">
                                 <div class="relative h-60 overflow-hidden">
-                                    <img src="assets/images/synchronizing-panel.jpg" alt="Synchronization Panel" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                    <img src="assets/images/synchronizing-panel.webp" alt="Synchronization Panel" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                                 </div>
                                 <div class="p-6 text-center">
                                     <h3 class="font-bold text-lg text-gray-900">Synch Panel</h3>

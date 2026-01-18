@@ -34,32 +34,21 @@
     <link rel="icon" type="image/png" href="assets/images/mini-logo.png">
     <link rel="apple-touch-icon" href="assets/images/mini-logo.png">
 
-    <!-- Google Fonts (Inter) -->
+    <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'inter': ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        'royal-blue': '#1e3a8a',
-                        'royal-gold': '#d97706',
-                        'royal-green': '#059669',
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="assets/css/tailwind.min.css">
 
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Inter) - deferred -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
+
+    <!-- Font Awesome - deferred -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -281,7 +270,7 @@
                 <!-- Spare Parts Card -->
                 <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 fade-in-up overflow-hidden">
                     <div class="h-52 bg-gray-50 flex items-center justify-center p-4">
-                        <img src="assets/images/speare-parts.png" alt="Generator Spare Parts" class="max-w-full max-h-full object-contain rounded-lg" loading="lazy">
+                        <img src="assets/images/speare-parts.webp" alt="Generator Spare Parts" class="max-w-full max-h-full object-contain rounded-lg" loading="lazy">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Genuine Spare Parts</h3>
@@ -309,7 +298,7 @@
                 <!-- Synchronizing Panel Card -->
                 <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 fade-in-up overflow-hidden">
                     <div class="h-52 bg-gray-50 flex items-center justify-center p-4">
-                        <img src="assets/images/synchronizing-panel.jpg" alt="Synchronizing Panel" class="max-w-full max-h-full object-contain rounded-lg" loading="lazy">
+                        <img src="assets/images/synchronizing-panel.webp" alt="Synchronizing Panel" class="max-w-full max-h-full object-contain rounded-lg" loading="lazy">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Synchronizing Panel</h3>
@@ -341,7 +330,7 @@
                 <!-- Services & Support Card -->
                 <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 fade-in-up overflow-hidden">
                     <div class="h-52 bg-gray-50 flex items-center justify-center p-4">
-                        <img src="assets/images/service_image.png" alt="Services & Support" class="max-w-full max-h-full object-contain rounded-lg" loading="lazy">
+                        <img src="assets/images/service_image.webp" alt="Services & Support" class="max-w-full max-h-full object-contain rounded-lg" loading="lazy">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Services & Support</h3>

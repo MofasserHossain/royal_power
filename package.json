@@ -1,0 +1,17 @@
+{
+  "name": "royal_power",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i input.css -o assets/css/tailwind.min.css --minify",
+    "watch": "npx @tailwindcss/cli -i input.css -o assets/css/tailwind.min.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  }
+}

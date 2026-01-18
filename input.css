@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@source "./*.html";
+@source "./assets/**/*.js";
+
+@theme {
+  --font-inter: 'Inter', sans-serif;
+  --color-royal-blue: #1e3a8a;
+  --color-royal-gold: #d97706;
+  --color-royal-green: #059669;
+}
