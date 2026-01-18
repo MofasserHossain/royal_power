@@ -61,7 +61,7 @@ function initProductsSlider() {
     if (productsSlider) {
         new Splide('#products-slider', {
             type: 'loop',
-            perPage: 4,
+            fixedWidth: '300px',
             perMove: 1,
             gap: '1rem',
             autoplay: true,
@@ -70,15 +70,12 @@ function initProductsSlider() {
             arrows: true,
             pagination: true,
             breakpoints: {
-                1280: {
-                    perPage: 3,
-                },
                 1024: {
-                    perPage: 2,
+                    arrows: false,
                 },
                 640: {
-                    perPage: 1,
-                    arrows: false,
+                    fixedWidth: '320px',
+                    gap: '0.5rem',
                 },
             },
         }).mount();
@@ -91,7 +88,7 @@ function initClientsSlider() {
     if (clientsSlider) {
         const splide = new Splide('#clients-slider', {
             type: 'loop',
-            perPage: 5,
+            fixedWidth: '220px',
             perMove: 1,
             gap: '1rem',
             arrows: false,
@@ -104,14 +101,9 @@ function initClientsSlider() {
                 pauseOnFocus: false,
             },
             breakpoints: {
-                1024: {
-                    perPage: 4,
-                },
-                768: {
-                    perPage: 3,
-                },
                 640: {
-                    perPage: 2,
+                    fixedWidth: '180px',
+                    gap: '0.5rem',
                 },
             },
         });

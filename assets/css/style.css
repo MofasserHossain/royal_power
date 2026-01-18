@@ -346,17 +346,9 @@ html {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+    /* Hide hero slider arrows on mobile */
     .hero-section .splide__arrow {
-        width: 40px;
-        height: 40px;
-    }
-
-    .hero-section .splide__arrow--prev {
-        left: 10px;
-    }
-
-    .hero-section .splide__arrow--next {
-        right: 10px;
+        display: none !important;
     }
 
     .hero-section .splide__pagination {
@@ -374,6 +366,24 @@ html {
         height: 56px;
         bottom: 20px;
         right: 20px;
+    }
+}
+
+/* Hide hero slider arrows on smaller tablets too */
+@media (max-width: 1024px) {
+    .hero-section .splide__arrow {
+        display: none !important;
+    }
+}
+
+/* Hide top header bar on mobile - show only on desktop */
+.top-header-bar {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .top-header-bar {
+        display: block;
     }
 }
 
