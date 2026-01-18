@@ -402,7 +402,7 @@ function preloadImages(urls) {
 
 // Preload hero slider images
 preloadImages([
-    'assets/images/slide1.jpg',
-    'assets/images/slide2.jpg',
-    'assets/images/slide3.jpg'
+    'assets/images/slide1.webp',
+    'assets/images/slide2.webp',
+    'assets/images/slide3.webp'
 ]);

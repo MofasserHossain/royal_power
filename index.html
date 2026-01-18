@@ -49,6 +49,12 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
+    <!-- Preload LCP image for faster hero rendering -->
+    <link rel="preload" as="image" href="assets/images/slide1.webp" type="image/webp">
+
+    <!-- Preload Font Awesome fonts -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
     <!-- Critical CSS (inline for above-the-fold) -->
     <link rel="stylesheet" href="assets/css/tailwind.min.css">
 
@@ -404,8 +410,8 @@
                         </div>
                     </div>
 
-                    <a href="contact.html" class="btn-primary inline-flex items-center" aria-label="Learn more about Royal Power Service">
-                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    <a href="contact.html" class="btn-primary inline-flex items-center">
+                        Learn About Us <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
             </div>
@@ -427,7 +433,7 @@
                 <!-- Diesel Generator -->
                 <div class="service-card bg-white rounded-2xl shadow-lg overflow-hidden group fade-in-up">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="assets/images/generator.jpg" alt="Diesel Generator" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" width="400" height="192" loading="lazy">
+                        <img src="assets/images/generator.webp" alt="Diesel Generator" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" width="400" height="192" loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-4">
                             <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
@@ -438,8 +444,8 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2 text-gray-900">Diesel Generator</h3>
                         <p class="text-gray-600 text-sm mb-4">15 KVA - 3000 KVA generators with sales, rental, installation & 24/7 support.</p>
-                        <a href="service.html" class="text-royal-blue font-semibold text-sm inline-flex items-center group-hover:text-blue-700" aria-label="Learn more about Diesel Generator services">
-                            Learn More <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        <a href="service.html" class="text-royal-blue font-semibold text-sm inline-flex items-center group-hover:text-blue-700">
+                            Generator Services <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
                 </div>
@@ -458,8 +464,8 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2 text-gray-900">Genuine Spare Parts</h3>
                         <p class="text-gray-600 text-sm mb-4">Genuine filters, overhauling spares, and generator controllers available.</p>
-                        <a href="service.html" class="text-royal-blue font-semibold text-sm inline-flex items-center group-hover:text-blue-700" aria-label="Learn more about Genuine Spare Parts">
-                            Learn More <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        <a href="service.html" class="text-royal-blue font-semibold text-sm inline-flex items-center group-hover:text-blue-700">
+                            View Spare Parts <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
                 </div>
@@ -478,8 +484,8 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2 text-gray-900">Synchronizing Panel</h3>
                         <p class="text-gray-600 text-sm mb-4">Diesel, Gas & REB generator synchronizing solutions for all needs.</p>
-                        <a href="service.html" class="text-royal-blue font-semibold text-sm inline-flex items-center group-hover:text-blue-700" aria-label="Learn more about Synchronizing Panel solutions">
-                            Learn More <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        <a href="service.html" class="text-royal-blue font-semibold text-sm inline-flex items-center group-hover:text-blue-700">
+                            Panel Solutions <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
                 </div>
@@ -498,8 +504,8 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2 text-gray-900">Services & Support</h3>
                         <p class="text-gray-600 text-sm mb-4">AMC, emergency 24/7 support, scheduled service & overhauling.</p>
-                        <a href="service.html" class="text-royal-blue font-semibold text-sm inline-flex items-center group-hover:text-blue-700" aria-label="Learn more about Services and Support">
-                            Learn More <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        <a href="service.html" class="text-royal-blue font-semibold text-sm inline-flex items-center group-hover:text-blue-700">
+                            Support Services <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
                 </div>
