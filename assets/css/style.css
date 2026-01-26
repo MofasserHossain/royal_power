@@ -43,9 +43,14 @@ html {
     transform: translateY(-2px);
 }
 
-/* Navigation Shadow on Scroll */
+/* Navigation Border and Shadow */
+#main-nav {
+    border-bottom: 1px solid #e5e7eb;
+}
+
 .nav-scrolled {
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    border-bottom-color: transparent;
 }
 
 /* Hero Slider Styles */
