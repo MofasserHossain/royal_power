@@ -70,6 +70,10 @@ function initHeroSlider() {
             pagination: true,
             speed: 1000,
             easing: 'ease-in-out',
+            // CLS optimizations
+            waitForTransition: false,
+            updateOnMove: false,
+            trimSpace: false,
         }).mount();
     }
 }
@@ -212,7 +216,7 @@ function initScrollReveal() {
 
     const observerOptions = {
         root: null,
-        rootMargin: '0px',
+        rootMargin: '100px 0px',
         threshold: 0.1
     };
 
@@ -429,9 +433,9 @@ function preloadImages(urls) {
 
 // Preload hero slider images
 preloadImages([
-    'assets/images/slide1.webp',
-    'assets/images/slide2.webp',
-    'assets/images/slide3.webp'
+    'assets/images/home-slide1.webp',
+    'assets/images/home-slide2.webp',
+    'assets/images/home-slide3.webp'
 ]);
 
 // Product Image Slideshow (for Spare Parts and Controller sections)

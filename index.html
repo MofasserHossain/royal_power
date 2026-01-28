@@ -60,7 +60,7 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
     <!-- Preload LCP image for faster hero rendering -->
-    <link rel="preload" as="image" href="assets/images/slide1.webp" type="image/webp">
+    <link rel="preload" as="image" href="assets/images/home-slide1.webp" type="image/webp">
 
     <!-- Critical CSS (inline for above-the-fold content) -->
     <style>
@@ -501,6 +501,14 @@
             --tw-gradient-to: #1d4ed8
         }
 
+        .object-85 {
+            object-position: 85% center;
+        }
+
+        .object-80 {
+            object-position: 80% center;
+        }
+
         /* Font Awesome font-display fix for better performance */
         @font-face {
             font-family: 'Font Awesome 6 Free';
@@ -526,12 +534,46 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
     </noscript>
 
-    <!-- Splide.js CSS - deferred -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-    </noscript>
+    <!-- Critical CSS - Prevent hero CLS during load -->
+    <style>
+        .hero-section {
+            position: relative;
+            min-height: 500px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-section { min-height: 600px; }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-section { min-height: 700px; }
+        }
+
+        .hero-slide {
+            position: relative;
+            min-height: 500px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-slide { min-height: 600px; }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-slide { min-height: 700px; }
+        }
+
+        .hero-slide img {
+            aspect-ratio: 1920 / 1080;
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+
+    <!-- Splide.js CSS - load immediately -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 
     <!-- Font Awesome - deferred -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
@@ -541,9 +583,9 @@
     </noscript>
 
     <!-- Custom CSS - deferred -->
-    <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/style.min.css">
     </noscript>
 
     <!-- JSON-LD Structured Data for Local Business -->
@@ -708,7 +750,7 @@
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center">
-                    <img src="assets/images/main-logo.webp" alt="Royal Power Service Logo" class="h-14 md:h-16 w-auto">
+                    <img src="assets/images/main-logo.webp" alt="Royal Power Service Logo" class="h-14 md:h-16 w-auto" width="2558" height="437">
                 </a>
 
                 <!-- Desktop Navigation -->
@@ -749,6 +791,9 @@
         </div>
     </nav>
 
+    <!-- Main Content -->
+    <main id="main-content">
+
     <!-- Hero Slider Section -->
     <section class="hero-section relative">
         <div id="hero-slider" class="splide" aria-label="Hero Slides">
@@ -758,8 +803,8 @@
                     <li class="splide__slide">
                         <div class="hero-slide relative h-[500px] md:h-[600px] lg:h-[700px]">
                             <img src="assets/images/home-slide1.webp" alt="Power Solutions"
-                                class="absolute inset-0 w-full h-full object-cover object-[85%] md:object-center"
-                                width="1920" height="700" fetchpriority="high">
+                                class="absolute inset-0 w-full h-full object-cover object-85 md:object-center"
+                                width="1920" height="1080" fetchpriority="high">
                             <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
                             <div class="absolute inset-0 flex items-center">
                                 <div class="container mx-auto px-4">
@@ -787,8 +832,8 @@
                     <li class="splide__slide">
                         <div class="hero-slide relative h-[500px] md:h-[600px] lg:h-[700px]">
                             <img src="assets/images/home-slide2.webp" alt="Engineering Excellence"
-                                class="absolute inset-0 w-full h-full object-cover" width="1920" height="700"
-                                loading="lazy">
+                                class="absolute inset-0 w-full h-full object-cover" width="1920" height="1079"
+                                fetchpriority="high">
                             <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
                             <div class="absolute inset-0 flex items-center">
                                 <div class="container mx-auto px-4">
@@ -816,8 +861,8 @@
                     <li class="splide__slide">
                         <div class="hero-slide relative h-[500px] md:h-[600px] lg:h-[700px]">
                             <img src="assets/images/home-slide3.webp" alt="24/7 Service"
-                                class="absolute inset-0 w-full h-full object-cover object-[80%] md:object-center"
-                                width="1920" height="700" loading="lazy">
+                                class="absolute inset-0 w-full h-full object-cover object-80 md:object-center"
+                                width="1821" height="1024" fetchpriority="high">
                             <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
                             <div class="absolute inset-0 flex items-center">
                                 <div class="container mx-auto px-4">
@@ -1572,6 +1617,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white pt-16 pb-8">
         <div class="container mx-auto px-4">
@@ -1608,7 +1655,7 @@
 
                 <!-- Quick Links -->
                 <div>
-                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
                     <ul class="space-y-3 text-sm">
                         <li><a href="index.html"
                                 class="text-gray-400 hover:text-royal-gold transition-colors inline-flex items-center"><i
@@ -1627,7 +1674,7 @@
 
                 <!-- Services -->
                 <div>
-                    <h4 class="text-lg font-bold mb-6">Our Services</h4>
+                    <h3 class="text-lg font-bold mb-6">Our Services</h3>
                     <ul class="space-y-3 text-sm">
                         <li><a href="service.html"
                                 class="text-gray-400 hover:text-royal-gold transition-colors inline-flex items-center"><i
@@ -1649,7 +1696,7 @@
 
                 <!-- Contact -->
                 <div>
-                    <h4 class="text-lg font-bold mb-6">Contact Us</h4>
+                    <h3 class="text-lg font-bold mb-6">Contact Us</h3>
                     <div class="space-y-4 text-sm">
                         <div class="flex items-start gap-3">
                             <div
@@ -1700,7 +1747,7 @@
                     <a href="https://www.linkedin.com/in/mofasser-hossain/" target="_blank" rel="noopener noreferrer"
                         class="developer-credit text-sm">
                         <span class="dev-label">Developed by</span>
-                        <img src="assets/images/developer.webp" alt="Mofasser Hossain" class="dev-image" loading="lazy">
+                        <img src="assets/images/developer.webp" alt="Mofasser Hossain" class="dev-image" loading="lazy" width="719" height="945">
                         <span class="dev-name">Mofasser Hossain</span>
                     </a>
                 </div>
@@ -1723,7 +1770,7 @@
         src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
 
     <!-- Custom JavaScript - deferred -->
-    <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/main.min.js"></script>
 </body>
 
 </html>

@@ -120,6 +120,60 @@ html {
     animation-delay: 0.3s;
 }
 
+/* Prevent CLS with aspect-ratio declarations */
+.hero-slide img {
+    aspect-ratio: 1920 / 1080;
+}
+
+.splide__slide:nth-child(3) .hero-slide img {
+    aspect-ratio: 1821 / 1024;
+}
+
+.hero-slide {
+    min-height: 500px;
+}
+
+@media (min-width: 768px) {
+    .hero-slide {
+        min-height: 600px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-slide {
+        min-height: 700px;
+    }
+}
+
+/* Pre-render Splide structure to prevent initialization shifts */
+.hero-section .splide__pagination {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    height: 24px;
+    z-index: 10;
+}
+
+.hero-section .splide__slide {
+    flex-shrink: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hero-section .splide__slide.is-active {
+    opacity: 1;
+}
+
+.hero-section .splide:not(.is-initialized) .splide__slide:first-child {
+    opacity: 1;
+}
+
 /* Service Card Styles */
 .service-card {
     transition: all 0.3s ease;
@@ -240,7 +294,7 @@ html {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(0);
     }
     to {
         opacity: 1;
@@ -250,7 +304,7 @@ html {
 
 .fade-in-up {
     opacity: 0;
-    transform: translateY(30px);
+    will-change: opacity;
 }
 
 .fade-in-up.visible {
