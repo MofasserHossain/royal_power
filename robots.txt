@@ -1,13 +1,20 @@
 # robots.txt for Royal Power Service
 # https://royalpowerservice.com
 
+# Default: Allow all legitimate bots
 User-agent: *
 Allow: /
 
-# Sitemap location
+# Sitemap for better indexing
 Sitemap: https://royalpowerservice.com/sitemap.xml
 
-# Allow all major search engines
+# Crawl delay (prevent server overload)
+Crawl-delay: 1
+
+# ============================================
+# Major Search Engines - ALLOW
+# ============================================
+
 User-agent: Googlebot
 Allow: /
 
@@ -20,18 +27,16 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-# Allow AI crawlers for better AI search visibility
-User-agent: GPTBot
+User-agent: Yandex
 Allow: /
 
-User-agent: ChatGPT-User
+User-agent: Baiduspider
 Allow: /
 
-User-agent: Claude-Web
-Allow: /
-
-User-agent: Anthropic-AI
-Allow: /
+# ============================================
+# AI Search (Real-time queries) - ALLOW
+# These show results to users in real-time
+# ============================================
 
 User-agent: PerplexityBot
 Allow: /
@@ -39,5 +44,80 @@ Allow: /
 User-agent: YouBot
 Allow: /
 
-# Crawl delay to be polite
-Crawl-delay: 1
+# ============================================
+# AI Training Crawlers - BLOCK
+# These train AI models on your content
+# ============================================
+
+# OpenAI training
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+# Google AI training
+User-agent: Google-Extended
+Disallow: /
+
+# Anthropic training
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Anthropic-AI
+Disallow: /
+
+# Common Crawl (used for AI training datasets)
+User-agent: CCBot
+Disallow: /
+
+# Meta/Facebook AI training
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+# Apple AI training
+User-agent: Applebot-Extended
+Disallow: /
+
+# ByteDance/TikTok
+User-agent: Bytespider
+Disallow: /
+
+# Amazon training
+User-agent: Amazonbot
+Disallow: /
+
+# Other AI training bots
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+# ============================================
+# Block Known Scrapers & Bad Bots
+# ============================================
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
